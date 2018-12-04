@@ -14,6 +14,7 @@ public class App {
 		
 		car1.start();
 		car1.wipeWindShield();
+		car1.showInfo();
 		car1.stop();
 		
 	}
