@@ -40,12 +40,19 @@ public class App {
 		System.out.print("Here is some text.\tThat was a tab.\nThat was newLine.");
 		System.out.println("More text.");
 		
+		
+		// Format integers
 		System.out.printf("Total cost %-10d; quantity is %d\n", 5, 120);
+		//just use f as use %d, %s...//
 		
 		for (int i = 0; i < 20; i++) {
-			System.out.printf("%2d: some text here\n", i);
-			
+			System.out.printf("%-2d: %s\n", i, "here is some text");		
 		}
+		
+		
+		// Formatting floating point value
+		System.out.printf("Total value: %.2f\n", 5.6789);
+		System.out.printf("Total value: %6.1f\n", 123.57345);
 		
 	}
 	
