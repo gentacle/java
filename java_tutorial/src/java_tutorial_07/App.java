@@ -10,7 +10,14 @@ public class App {
 		machine1.start();
 		
 		Person person1 = new Person("gentacle");
+		person1.greet();
 		
+		Info info1 = new Machine();
+		info1.showInfo();
+
+//		Info info2 = new person1; 이미 객체화되어있어서, 그리고 형태를 가지지못한 대상이라 객체화 불가능.
+		Info info2 = person1;
+		info2.showInfo();
 	}
 
 }
