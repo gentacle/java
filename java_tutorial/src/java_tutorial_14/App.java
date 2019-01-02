@@ -8,6 +8,17 @@ import java.util.ArrayList;
 //기본 값 형식들은 정적 클래스의 toString 정적 메서드를 통해 해당 값을 문자열로 변환할 수 있게 제공하고 있음.
 //만약 개발자가 정의한 형식에 toString 메서드를 재정의하지 않으면 디폴트 문자열 값은 ”클래스 이름@해쉬 코드값”.
 
+// java7부터 인스턴스 생성할 때 타입 인자를 2번 주지않아도됨 : 타입추론
+//- List<Integer> list = new ArrayList<Integer>(); : java6까지
+//- List<Integer> list = new ArrayList<>(); : java7부터
+
+
+//Wildcard[와일드카드] ?
+//- 타입 파라미터가 의미있게 사용되는가? 사용되지않는다면 와일드카드 사용
+//(1) 무엇이라도 들어가도된다 : 모른다, 몰라도된다, 무엇이 들어올지 알 필요없다
+//(2) 데이터(타입)보다 데이터가 있으니깐 무엇을 한다에 관심
+
+
 class Machine {
 	// RMB >> Source >>Generate toString() >> check "toString"
 
@@ -67,8 +78,8 @@ public class App {
 
 	}
 
-	//Generic[제네릭] : 인자 내용을 타입체크하는것.
-	//인자로 받은 타입으로 컴파일러 자동변환되기때문에 list.get(idx) 할 때 원하는 타입으로 캐스팅하지않아도됨.
+	// Generic[제네릭] : 인자 내용을 타입체크하는것.
+	// 인자로 받은 타입으로 컴파일러 자동변환되기때문에 list.get(idx) 할 때 원하는 타입으로 캐스팅하지않아도됨.
 	// 모든 타입을 받아들일 때 간편하게 className<T> 혹은 <T> int getScore와 같이 해놓으면 편함.
 	public static void showList(ArrayList<String> ListnameOfFor) {
 		for (String value : ListnameOfFor) {
@@ -89,12 +100,13 @@ public class App {
 		}
 	}
 
-	//가장 끝단인 Camera를 수퍼클래스로 가지는 인자들에 대해 실행한다.
-	//다르게 말하면 업케이스를 발생시키는것.
+	// List<? super B> : ? 타입파라미터가 B의 슈퍼클래스여야함
+	// 가장 끝단인 Camera를 수퍼클래스로 가지는 인자들에 대해 실행한다.
+	// 다르게 말하면 업케이스를 발생시키는것.
 	public static void showMachineList2(ArrayList<? super Camera> InputForValue) {
 		for (Object value : InputForValue) {
 			System.out.println(value);
 		}
 	}
-	
+
 }
