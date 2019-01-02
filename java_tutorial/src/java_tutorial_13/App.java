@@ -43,8 +43,24 @@ public class App {
 		
 		
 		//////////////////// Java 7 style ///////////////////
+		//https://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.htm
+		
+		ArrayList<String> someList = new ArrayList<>();
+		someList.add("CCAATT");
+		someList.add("DDOOGG");
+		someList.add("BBOOBB");
+		
+		String Animal = someList.get(1);
+		System.out.println(Animal);
+		
 
-		ArrayList<Animal> someList = new ArrayList<>();
+		ArrayList<Integer> someList2 = new ArrayList<>();
+		someList2.add(1);
+		someList2.add(671);
+		someList2.add((int)1241552);
+		
+		Integer Number = someList2.get(2);
+		System.out.println(Number);
 		
 		
 		
