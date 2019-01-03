@@ -1,11 +1,13 @@
 package java_tutorial_16;
 
+//https://www.udemy.com/java-tutorial/learn/v4/t/lecture/156510?start=0
+//Reading Files Using Scanner
+
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-//https://www.udemy.com/java-tutorial/learn/v4/t/lecture/156510?start=0
-//Reading Files Using Scanner
 
 public class App {
 
