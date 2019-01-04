@@ -10,7 +10,10 @@ import java.util.Scanner;
 public class App {
 
 	public static void main(String[] args) throws FileNotFoundException {
-		String fileName = "C:/Users/gentacle/Documents/workspace/java/java_tutorial/example.txt";
+
+		//root디렉토리 다음에 파일이 있다면 상대경로 사용가능 
+		//String fileName = "C:/Users/gentacle/Documents/workspace/java/java_tutorial/example.txt";
+		String fileName = "example.txt";
 
 		File textFile = new File(fileName);
 
