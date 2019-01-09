@@ -1,0 +1,6 @@
+first line
+second line
+third line
+
+
+example_java_tutorial_21.txt
