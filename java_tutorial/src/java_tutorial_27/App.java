@@ -7,16 +7,16 @@ public class App {
 
 	public static void main(String[] args) {
 
-		int value = 4;
-		calculate(value);
-
-		System.out.println(value);
+		System.out.println("Factorial 5 is '"+calculate(5)+"'");
+		
 	}
-	
-	private static void calculate(int value) {
-		
-		value = value -1;
-		System.out.println(value);
-		
+
+	private static int calculate(int value) {
+//		System.out.println(value);
+		if (value == 1) {
+			return 1;
+		}
+
+		return calculate(value - 1)*value;
 	}
 }
