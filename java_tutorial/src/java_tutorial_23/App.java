@@ -13,7 +13,7 @@ public class App {
 
 	public static void main(String[] args) {
 		
-		File file = new File("test.txt");
+		File file = new File("example_java_tutorial_23.txt");
 		
 		try(BufferedWriter br = new BufferedWriter(new FileWriter(file))) {
 			br.write("this line one");
